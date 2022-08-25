@@ -16,6 +16,7 @@ public class InputRemote : MonoBehaviour
     {
         NetworkData decodedData = JsonUtility.FromJson<NetworkData>(Encoding.ASCII.GetString(data));
         mover.UpdateLocation(decodedData.location);
+        mover.UpdateMaterial(decodedData.mat);
     }
 
 

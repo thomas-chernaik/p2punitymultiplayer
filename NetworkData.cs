@@ -7,4 +7,5 @@ using UnityEngine;
 public class NetworkData 
 {
     public Vector3 location;
+    public int mat;
 }

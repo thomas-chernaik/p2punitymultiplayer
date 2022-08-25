@@ -12,8 +12,9 @@ public class OutputToRemote : MonoBehaviour
     {
         NetworkData data = new NetworkData();
         data.location = mover.GetLocation();
+        data.mat = mover.GetMaterial();
         byte[] dataToSend = Encoding.ASCII.GetBytes(JsonUtility.ToJson(data));
-        connector.SendMessage(dataToSend);
+        connector.SendAMessage(dataToSend);
     }
 
     // Update is called once per frame
